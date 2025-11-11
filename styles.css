@@ -1,0 +1,315 @@
+.background {
+    background-image: url('coding.gif');
+    background-color: #282828;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.navbar-collapse {
+    display: none;
+}
+
+.nav-toggle:checked ~ .navbar-collapse {
+    display: block;
+}
+
+.navbar-toggler::after {
+    content: " ▼";
+}
+
+.nav-toggle:checked + .navbar-toggler::after {
+    content: " ▲";
+}
+
+li {
+    padding: 5px 0px;
+}
+
+a:focus-visible {
+    outline: 3px solid #00AA9A; 
+}
+
+.nav-color-1 {
+    background-color: #00AA9A;
+}
+
+.navbar a {
+    color: black;
+    font-size: clamp(24px, 3vw, 4vw);
+    margin: 0px clamp(15px, 2vw, 3vw);
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 10px;
+}
+
+.main-content {
+    font-family: 'Jacques Francois', serif;
+    min-height: 80vh;
+    margin-top: 10vh;
+}
+
+.main-content h1 {
+    font-size: clamp(56px, 5.5vw, 6vw);
+}
+
+.main-content h2 {
+    font-size: clamp(36px, 3.5vw, 4vw);
+}
+
+.resume-button {
+    padding: clamp(10px, 2vh, 3vh) clamp(20px, 3vw, 4vw);
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    font-size: clamp(18px, 2vw, 3vw);
+    background-color: #00AA9A;
+}
+
+@media (hover:hover) {
+    .resume-button:hover {
+        background-color: #97E8CA;
+        padding: clamp(20px, 3vh, 4vh) clamp(40px, 5vw, 6vw);
+        color: #282828;
+        font-size: clamp(24px, 3vw, 4vw);
+    }
+}
+
+.resume-button:active {
+    background-color: #00AA9A;
+    padding: clamp(10px, 2vh, 3vh) clamp(20px, 3vw, 4vw);
+    border: 2px solid black;
+    color: white;
+    text-decoration: none;
+    font-size: clamp(18px, 2vw, 3vw);
+}
+
+.resume-button-spacing {
+    margin-top: clamp(300px, 31vh, 32vh);
+}
+
+.header-bar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: clamp(90px, 10vh, 11vh);
+    background-color: black;
+    color: white;
+    font-family: '42dot Sans', serif;
+    z-index: 2;
+}
+
+.header-bar a:hover {
+    font-size: clamp(32px, 3.5vw, 4vw);
+    font-weight: bolder;
+}
+
+.menu-button{
+    display: flex;
+    align-items: center;
+    border-color: transparent;
+    background-color: transparent;
+    color: white;
+    margin: clamp(5px, 1vh, 2vh) clamp(10px, 2vw, 3vw);
+    font-size: clamp(24px, 3vw, 4vw);
+}
+
+.title-wrapper {
+    flex-grow: 1;
+    text-align: center;
+    align-self: center;
+}
+
+.title-layout {
+    font-weight: bold;
+    font-size: clamp(35px, 4vw, 5vw);
+}
+
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 0px 6px;
+    margin: clamp(5px, 1vh, 2vh) clamp(10px, 2vw, 3vw);
+    font-size: clamp(24px, 3vw, 4vw);
+}
+
+.sub-content {
+    min-height: 100vh;
+    background-color: #00AA9A;
+    padding-top: clamp(100px, 11vh, 12vh);
+}
+
+.sub-content h2 {
+    font-size: clamp(28px, 3vw, 4vw);
+    color: black;
+}
+
+.offcanvas-toggle:checked ~ main #offcanvaslinks {
+    display: block;
+}
+
+#offcanvaslinks {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #97E8CA;
+    height: 100vh;
+    width: clamp(150px, 16vw, 17vw);
+    z-index: 3;
+}
+
+.offcanvas-title {
+    font-size: clamp(24px, 3vw, 4vw);
+}
+
+.profile-image-radius {
+    width: clamp(250px, 26vw, 27vw);
+    border: 2px solid black;
+}
+
+.about-text {
+    max-width: 90%;
+    font-size: clamp(16px, 1.5vw, 2vw);
+    text-align: justify;
+    margin-left: clamp(18px, 1.5vw, 2vw);
+    color: black;
+}
+
+.skills-box {
+    background-color: #97E8CA;
+    border-radius: clamp(8px, 1vw, 2vw);
+}
+
+.skills-box h2 {
+    font-size: clamp(20px, 3vw, 4vw);
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(80px, 9vw, 10vw);
+}
+
+.skill-item img {
+    width: clamp(72px, 8vw, 9vw);
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.skill-item img:hover {
+    transform: scale(1.1);
+}
+
+.skill-item figcaption {
+    font-size: clamp(18px, 1.5vw, 2vw);
+    text-align: center;
+}
+
+.silt{
+    font-family: 'Shadows Into Light Two', serif;
+}
+
+.socials-box {
+    border:2px solid black;
+    background-color: #97E8CA;
+}
+
+.social-icons {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    width: clamp(140px, 15vw, 16vw);
+}
+
+.social-icons img {
+    aspect-ratio: 1/1;
+    width: clamp(42px, 4.5vw, 5vw);
+    transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.contact-number {
+    font-size: clamp(20px, 2.5vw, 3vw);
+    color: black;
+}
+
+.contact-number a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact-note {
+    text-align: center;
+    font-size: clamp(14px, 1.5vw, 2vw);
+    font-weight: bold;
+    color: black;
+    margin-right: 20px;
+}
+
+.page-progress {
+    margin-top: clamp(14px, 2vh, 3vh);
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+.progress-label {
+    font-size: clamp(15px, 1.2vw, 2vw);
+    margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+    width: clamp(100px, 11vw, 12vw);
+    height: clamp(20px, 3vh, 4vh);
+    border-radius: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: green;
+}
+
+.project-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    width: clamp(300px, 31vw, 32vw);
+    height: clamp(230px, 24vh, 25vh);
+}
+
+.project-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project-label {
+    background-color: #97E8CA;
+    font-size: clamp(28px, 3vw, 4vw);
+    border: 2px solid black;
+    border-radius: clamp(8px, 1vw, 2vw);
+}
+
+.project-button {
+    background-color: #67DDB1;
+    color: black;
+    text-decoration: none;
+    font-size: clamp(16px, 2vw, 3vw);
+    border: 2px solid black;
+    border-radius: clamp(8px, 1vw, 2vw);
+}
