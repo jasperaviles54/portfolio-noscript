@@ -1,23 +1,23 @@
 :root {
-    --color-bg: #0e1116;
-    --color-surface: #161b22;
-    --color-surface-elevated: #1a1f27;
+    --color-bg: #f5f6f8;
+    --color-surface: #ffffff;
+    --color-surface-elevated: #ebedf0;
 
-    --color-text: #e6e8eb;
-    --color-text-muted: #9aa0a6;
-    --color-text-inverse: #0e1116;
+    --color-text: #1a1a2e;
+    --color-text-muted: #5a6270;
+    --color-text-inverse: #f5f6f8;
 
-    --color-accent: #1f3a3d;
-    --color-accent-hover: #2a5559;
-    --color-accent-strong: #4f8a8f;
+    --color-accent: #d4eef0;
+    --color-accent-hover: #b8e0e3;
+    --color-accent-strong: #2a7a80;
 
-    --color-border: #2a2f36;
-    --color-border-strong: #3d444c;
+    --color-border: #dce0e5;
+    --color-border-strong: #a0a8b2;
 
-    --color-success: #56b487;
-    --color-warning: #d97a6c;
-    --color-warning-bg: #3a1f1c;
-    --color-disabled: #6c747d;
+    --color-success: #1a8754;
+    --color-warning: #c0392b;
+    --color-warning-bg: #fce4e4;
+    --color-disabled: #adb5bd;
 
     --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
     --font-size-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);
@@ -40,32 +40,9 @@
     --letter-spacing-wider: 0.1em;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --color-bg: #f5f6f8;
-        --color-surface: #ffffff;
-        --color-surface-elevated: #ebedf0;
-
-        --color-text: #1a1a2e;
-        --color-text-muted: #5a6270;
-        --color-text-inverse: #f5f6f8;
-
-        --color-accent: #d4eef0;
-        --color-accent-hover: #b8e0e3;
-        --color-accent-strong: #2a7a80;
-
-        --color-border: #dce0e5;
-        --color-border-strong: #c4c9d0;
-
-        --color-success: #1a8754;
-        --color-warning: #c0392b;
-        --color-warning-bg: #fce4e4;
-        --color-disabled: #adb5bd;
-    }
-
-    img[alt="GitHub logo"] {
-        filter: none;
-    }
+.header-cta {
+    border-color: var(--color-border-strong);
+    background-color: rgba(0, 0, 0, 0.04);
 }
 
 body {
@@ -77,25 +54,48 @@ body {
     line-height: var(--line-height-normal);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
     font-weight: 600;
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
 }
 
-h1 { font-size: var(--font-size-3xl); }
-h2 { font-size: var(--font-size-2xl); }
-h3 { font-size: var(--font-size-xl); }
-h4 { font-size: var(--font-size-lg); }
-h5 { font-size: var(--font-size-md); }
-h6 { font-size: var(--font-size-base); }
+h1 {
+    font-size: var(--font-size-3xl);
+}
+
+h2 {
+    font-size: var(--font-size-2xl);
+}
+
+h3 {
+    font-size: var(--font-size-xl);
+}
+
+h4 {
+    font-size: var(--font-size-lg);
+}
+
+h5 {
+    font-size: var(--font-size-md);
+}
+
+h6 {
+    font-size: var(--font-size-base);
+}
 
 p {
     line-height: var(--line-height-relaxed);
 }
 
-small, .text-caption {
+small,
+.text-caption {
     font-size: var(--font-size-xs);
     color: var(--color-text-muted);
 }
@@ -172,7 +172,7 @@ body:has(#main-content:focus-within) .navbar.fixed-top:focus-within {
     display: none;
 }
 
-.nav-toggle:checked ~ .navbar-collapse {
+.nav-toggle:checked~.navbar-collapse {
     display: block;
 }
 
@@ -199,7 +199,7 @@ body:has(#main-content:focus-within) .navbar.fixed-top:focus-within {
     content: " ▼";
 }
 
-.nav-toggle:checked + .navbar-toggler::after {
+.nav-toggle:checked+.navbar-toggler::after {
     content: " ▲";
 }
 
@@ -259,8 +259,8 @@ a:focus-visible {
 
 .resume-button {
     padding: clamp(10px, 2vh, 3vh) clamp(20px, 3vw, 4vw);
-    border: 2px solid var(--color-text);
-    color: var(--color-text);
+    border: 2px solid #e6e8eb;
+    color: #e6e8eb;
     text-decoration: none;
     font-size: var(--font-size-base);
     font-weight: 500;
@@ -364,7 +364,7 @@ a:focus-visible {
     color: var(--color-text);
 }
 
-.offcanvas-toggle:checked ~ main #offcanvaslinks {
+.offcanvas-toggle:checked~main #offcanvaslinks {
     display: block;
 }
 
@@ -479,15 +479,18 @@ a:focus-visible {
     width: clamp(72px, 7vw, 90px);
 }
 
-.skill-item img {
+.skill-item img,
+.skill-item a img {
     width: clamp(48px, 5vw, 64px);
+    height: auto;
     aspect-ratio: 1/1;
     object-fit: contain;
     margin-bottom: 0.4rem;
     transition: transform 0.15s ease;
 }
 
-.skill-item:hover img {
+.skill-item:hover img,
+.skill-item:hover a img {
     transform: scale(1.08);
 }
 
@@ -498,9 +501,17 @@ a:focus-visible {
     color: var(--color-text);
 }
 
-img[alt="GitHub logo"] {
-    filter: invert(1);
+.skill-item.cert-item {
+    width: clamp(130px, 14vw, 180px);
 }
+
+.skill-item.cert-item img,
+.skill-item.cert-item a img {
+    width: 100%;
+    aspect-ratio: auto;
+}
+
+/* GitHub logo is dark (#222124) on light bg — no filter needed */
 
 .silt {
     font-family: 'Inter', system-ui, sans-serif;
