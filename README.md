@@ -118,7 +118,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Author
 
-**Jasper T. Aviles** — Software Developer
+**Jasper T. Aviles** — Information Systems Graduate
 
 - 🌐 [Portfolio](https://jasperaviles54.github.io/portfolio/)
 - 💻 [GitHub](https://github.com/jasperaviles54)
