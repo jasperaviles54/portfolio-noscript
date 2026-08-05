@@ -316,7 +316,7 @@ a:focus-visible {
 }
 
 /* Hide offcanvas Resume link on desktop (already in header bar) */
-@media (min-width: 992px) {
+@media (width >= 992px) {
     .offcanvas-resume-link {
         display: none;
     }
