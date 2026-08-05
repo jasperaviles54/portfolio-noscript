@@ -315,6 +315,13 @@ a:focus-visible {
     color: var(--color-accent-hover);
 }
 
+/* Hide offcanvas Resume link on desktop (already in header bar) */
+@media (min-width: 992px) {
+    .offcanvas-resume-link {
+        display: none;
+    }
+}
+
 .header-bar {
     display: flex;
     position: fixed;
